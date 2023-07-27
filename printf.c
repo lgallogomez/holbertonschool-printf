@@ -48,5 +48,5 @@ va_start(lista, str);
     }
     write (1, cajita, it2);
     va_end(lista);
-    return (0);
+    return (it2);
 }
