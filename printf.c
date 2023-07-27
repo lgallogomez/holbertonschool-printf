@@ -10,7 +10,7 @@ int _printf (const char *str, ...)
   int it1 = 0;
   int it2 = 0;
   int it_s = 0;
-  char cajita[20];
+  char cajita[2048];
 
 va_list lista;
 va_start(lista, str);
@@ -49,10 +49,4 @@ va_start(lista, str);
     write (1, cajita, it2);
     va_end(lista);
     return (0);
-}
-
-int main (void)
-{
-	_printf("letra %s, %c", "hey", 'a');
-	return (0);
 }
