@@ -12,7 +12,7 @@
 #include <stdarg.h>
 #include "main.h"
 
-int _printf (const char *str, ...)
+int _printf(const char *str, ...)
 {
 int it1 = 0;
 int it2 = 0;
@@ -36,6 +36,7 @@ while (str[it1] != '\0')
 		else if (str[it1] == 's')
 		{
 			char *caso_s = va_arg(lista, char *);
+
 			while (caso_s[it_s] != '\0')
 			{
 				cajita[it2] = caso_s[it_s];
@@ -53,7 +54,7 @@ while (str[it1] != '\0')
 		it2++;
 	}
 }
-write (1, cajita, it2);
+write(1, cajita, it2);
 va_end(lista);
 return (it2);
 }
