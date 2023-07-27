@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include <stdarg.h>
+#include "main.h"
 
 int _printf (const char *str, ...)
 {
@@ -46,6 +47,7 @@ va_start(lista, str);
         }
     }
     write (1, cajita, it2);
+    va_end(lista);
     return (0);
 }
 
