@@ -22,8 +22,8 @@ char cajita[2048];
 va_list lista;
 va_start(lista, str);
 
-if (str[it1] == '\0')
-return (0);
+if (str == NULL)
+return (NULL);
 
 while (str[it1] != '\0')
 {
