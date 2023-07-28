@@ -36,6 +36,7 @@ while (str[it1] != '\0')
 		else if (str[it1] == 's')
 		{
 			char *caso_s = va_arg(lista, char *);
+			it_s = 0;
 
 			while (caso_s[it_s] != '\0')
 			{
@@ -45,6 +46,12 @@ while (str[it1] != '\0')
 			}
 			if (str[it1++] == '\0')
 				cajita[it2] = '\0';
+		}
+		else if (str[it1] == '%')
+		{
+			cajita[it2] = str[it1];
+			it1++;
+			it2++;
 		}
 	}
 	else
