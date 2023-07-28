@@ -23,7 +23,7 @@ va_list lista;
 va_start(lista, str);
 
 if (str == NULL)
-return (0);
+return (-1);
 
 while (str[it1] != '\0')
 {
