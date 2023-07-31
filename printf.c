@@ -18,6 +18,7 @@ int it1 = 0;
 int it2 = 0;
 int it_s = 0;
 char cajita[2048];
+int it_di = 0;
 
 va_list lista;
 va_start(lista, str);
@@ -55,6 +56,14 @@ while (str[it1] != '\0')
 			cajita[it2] = str[it1];
 			it1++;
 			it2++;
+		}
+		else if (str[it1] == 'd' || str[it1] == 'i')
+		{
+			int *caso_di = va_arg(lista, int *);
+			it_di = 0;
+
+			for (; caso_di[it_di] != '\0'; it_di++, it2++)
+				cajita[it2] = caso_di[it_di];
 		}
 		else if (str[it1] == '\0')
 			return (-1);
