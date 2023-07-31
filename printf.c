@@ -58,9 +58,15 @@ while (str[it1] != '\0')
 		}
 		else if (str[it1] == '\0')
 			return (-1);
-		else
+		else if (str[it1] != '\0')
+		{
+			it1--;
 			for (; str[it1] != '\0'; it1++)
+			{
 				cajita[it2] = str[it1];
+				it2++;
+			}
+		}
 	}
 	else
 	{
