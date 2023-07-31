@@ -41,7 +41,8 @@ while (str[it1] != '\0')
 		{
 			char *caso_s = va_arg(lista, char *);
 			it_s = 0;
-
+			if (caso_s == NULL)
+				caso_s = "(null)"
 			while (caso_s[it_s] != '\0')
 			{
 				cajita[it2] = caso_s[it_s];
